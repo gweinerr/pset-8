@@ -1,4 +1,5 @@
 ///////////////////// CONSTANTS /////////////////////////////////////
+
 const winningConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -9,26 +10,33 @@ const winningConditions = [
   [0, 4, 8],
   [2, 4, 6]
 ];
+
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
+
 let board;
 let turn;
 let win;
+
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
+
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
+
 ///////////////////// EVENT LISTENERS ///////////////////////////////
+
 window.onload = init;
+
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
-///////////////////// FUNCTIONS /////////////////////////////////////
-function init() {
-  board = [
-    "", "", "",
-    "", "", "",
-    "", "", ""
-  ];
 
-  render();   // we'll write this later
+///////////////////// FUNCTIONS /////////////////////////////////////
+
+function init() {
+  board = ["", "", "", "", "", "", "", "", ""];
+  turn = "X";
+  win = null;
+
+  render();
 }
 
 function render() {
@@ -38,18 +46,6 @@ function render() {
 
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
-}
-
-function init() {
-  board = [
-    "", "", "",
-    "", "", "",
-    "", "", ""
-  ];
-  turn = "X";
-  win = null;
-
-  render();
 }
 
 function takeTurn(e) {
@@ -68,10 +64,6 @@ function takeTurn(e) {
   }
 }
 
-win = board[0] && board[0] === board[1] && board[1] === board[2] ? board[0] : null;  // X, O, or null
-
-// and so on, and so forth
-
 function getWinner() {
   let winner = null;
 
@@ -86,16 +78,4 @@ function getWinner() {
   });
 
   return winner ? winner : board.includes("") ? null : "T";
-}
-
-function takeTurn(e) {
-  let index = squares.findIndex(function(square) {
-    return square === e.target;
-  });
-
-  board[index] = turn;
-  turn = turn === "X" ? "O" : "X";
-  win = getWinner();
-
-  render();
 }
