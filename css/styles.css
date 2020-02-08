@@ -67,6 +67,7 @@ h2 {
 
 #xfirst_bttn {
 background-color: violet;
+border-radius: 25px;
 width: 100px;
 height: 50px;
 font-size: 20px;
