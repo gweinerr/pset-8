@@ -66,10 +66,13 @@ h2 {
 }
 
 #xfirst_bttn {
-background-color: blue;
+background-color: violet;
+width: 80px;
+
 
 }
 
 #ofirst_bttn {
-  background-color: purple;
+  background-color: dodgerblue;
+  width: 80px;
 }
