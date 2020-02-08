@@ -87,6 +87,10 @@ font-size: 20px;
   font-size: 30px;
 }
 
-table {
-  
+#center-me {
+  text-align: center;
+}
+
+#x-score {
+  text-align: center;
 }
