@@ -44,7 +44,7 @@ h2 {
 }
 
 .square:hover {
-  background-color: mediumorchid;
+  background-color: mediumslateblue;
   cursor: pointer;
 }
 
@@ -85,4 +85,8 @@ font-size: 20px;
 
 #style-me {
   font-size: 30px;
+}
+
+table {
+  
 }
