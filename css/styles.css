@@ -75,6 +75,7 @@ font-size: 20px;
 
 #ofirst_bttn {
   background-color: dodgerblue;
+  border-radius: 25px;
   width: 100px;
   height: 50px;
   font-size: 20px;
