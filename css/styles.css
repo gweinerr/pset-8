@@ -44,7 +44,7 @@ h2 {
 }
 
 .square:hover {
-  background-color: orange;
+  background-color: mediumorchid;
   cursor: pointer;
 }
 
@@ -60,7 +60,7 @@ h2 {
 }
 
 #reset-button:hover {
-  background-color: black;
+  background-color: mediumslateblue;
   color: white;
   cursor: pointer;
 }
