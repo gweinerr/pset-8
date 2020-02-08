@@ -92,10 +92,10 @@ font-size: 20px;
   display: inline-block;
 }
 
-#x-score {
-  text-align: center;
+#td1 {
+  padding: 15px;
 }
 
-#o-score {
-  text-align: center;
+#td2 {
+  padding: 15px;
 }
