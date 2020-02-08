@@ -94,7 +94,7 @@ function getWinner() {
 //Feature Request #2
 function xFirst() {
   init();
-  document.getElementById("whosturn").innerHTML = "Turn X";
+  document.getElementById("whosturn").innerHTML = "Turn: X";
   turn = "X";
   document.getElementById("xfirst_bttn").style.visibility = "hidden";
   document.getElementById("ofirst_bttn").style.visibility = "hidden";
@@ -102,7 +102,7 @@ function xFirst() {
 
 function oFirst() {
   init();
-  document.getElementById("whosturn").innerHTML = "Turn O";
+  document.getElementById("whosturn").innerHTML = "Turn: O";
   turn = "O";
   document.getElementById("ofirst_bttn").style.visibility = "hidden";
   document.getElementById("xfirst_bttn").style.visibility = "hidden";
