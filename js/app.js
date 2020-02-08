@@ -12,20 +12,21 @@ const winningConditions = [
 ];
 
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
-
+var clearapp = document.getElementById("whosturn");
 let board;
-let turn;
+let turn = "X";
 let win;
-
+let scoreX = 0;
+let scoreO = 0;
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");
 
 ///////////////////// EVENT LISTENERS ///////////////////////////////
-
+document.getElementById("xfirst_bttn").onclick = xFirst;
+document.getElementById("ofirst_bttn").onclick = oFirst;
 window.onload = init;
-
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
 
@@ -37,6 +38,8 @@ function init() {
   win = null;
 
   render();
+  document.getElementById("xfirst_bttn").style.visibility = "visible";
+  document.getElementById("ofirst_bttn").style.visibility = "visible";
 }
 
 function render() {
@@ -74,8 +77,33 @@ function getWinner() {
       board[condition[1]] === board[condition[2]]
     ) {
       winner = board[condition[0]];
+//Feature Request #1
+    if (winner === "X") {
+      scoreX++;
+      document.getElementById('x-score').innerHTML = scoreX;
+    } else {
+      scoreO++;
+      document.getElementById('o-score').innerHTML = scoreO;
+    }
     }
   });
 
   return winner ? winner : board.includes("") ? null : "T";
+}
+
+//Feature Request #2
+function xFirst() {
+  init();
+  document.getElementById("whosturn").innerHTML = "Turn X";
+  turn = "X";
+  document.getElementById("xfirst_bttn").style.visibility = "hidden";
+  document.getElementById("ofirst_bttn").style.visibility = "hidden";
+}
+
+function oFirst() {
+  init();
+  document.getElementById("whosturn").innerHTML = "Turn O";
+  turn = "O";
+  document.getElementById("ofirst_bttn").style.visibility = "hidden";
+  document.getElementById("xfirst_bttn").style.visibility = "hidden";
 }

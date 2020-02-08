@@ -17,9 +17,12 @@
   </head>
   <body>
     <h1>tic | tac | toe</h1>
-
+  <div id = "turnbttns">
+    <button id = "xfirst_bttn">X First</button>
+    <button id = "ofirst_bttn">O First</button>
+  </div>
     <div class="container column">
-      <h2>Turn: X</h2>
+      <h2 id = "whosturn">Turn: X</h2>
 
       <div class="container wrap" id="board">
         <div class="square"></div>
@@ -35,5 +38,11 @@
 
       <div id="reset-button">Play Again!</div>
     </div>
+
+    <div>
+      X Score: <div id="x-score">0</div>
+      O Score: <div id="o-score">0</div>
+    </div>
+
   </body>
 </html>
