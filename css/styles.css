@@ -44,7 +44,7 @@ h2 {
 }
 
 .square:hover {
-  background-color: lightgray;
+  background-color: orange;
   cursor: pointer;
 }
 
@@ -66,7 +66,7 @@ h2 {
 }
 
 #xfirst_bttn {
-border: 4px solid violet;
+border: 3px solid violet;
 background-color: white;
 border-radius: 25px;
 width: 100px;
@@ -75,7 +75,8 @@ font-size: 20px;
 }
 
 #ofirst_bttn {
-  background-color: dodgerblue;
+  border: 3px solid dodgerblue;
+  background-color: white;
   border-radius: 25px;
   width: 100px;
   height: 50px;
